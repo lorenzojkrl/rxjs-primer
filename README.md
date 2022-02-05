@@ -2,7 +2,10 @@
 
 1. [What is RxJS](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#1-what-is-rxjs)
 2. [Why RxJS? RxJS vs Promises](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#2-why-rxjs-rxjs-vs-promises)
-3. TBD
+3. [What are Observables](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#3-what-are-observables)
+4. What are Observers
+5. Hands-on-1: Create an RxJS Observable
+6. Hands-on-2: RxJS Interval 
 
 ## 1. What is RxJS
 
@@ -89,4 +92,4 @@ RxJS is a library that helps us manage and manipulate data over time. This often
 - Built-in errors handling
 - Cancellable. Unlike Promises, it is possible to cancel async actions.
 
-## 3. 
+## 3. What are Observables

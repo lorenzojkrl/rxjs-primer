@@ -93,3 +93,17 @@ RxJS is a library that helps us manage and manipulate data over time. This often
 - Cancellable. Unlike Promises, it is possible to cancel async actions.
 
 ## 3. What are Observables
+Observables are data over time. They are a data source.
+
+### How do we use Observables?
+<ol>
+  <li><strong>Subscribe to the Observable</strong>. An Observable is a data source but it doesn't emit any data until you subscribe. For this reason, we say that Observables are lazy. Subscribe to an Observable by using the aptly named subscribe() method: <code>myObservable.subscribe()</code><br><br>
+  </li>
+  <li><strong>Start receiving data</strong>. Once you subscribe to the Observable, you will start to receive some data. You will keep receiving "data packages" until you unsubscribe from the Observable. However, you don't know exactly how many "data packages" or when you will receive them. For this reason we say that <em>Observables push values</em>. You can think of Observables like a stream of data over a period of time. 
+  </li>
+</ol>
+
+<ol start="3">
+  <li><strong>Unsubscribe</strong>. Finally, when you don't need any more data you unsubscribe using the unsubscribe() method: <code>myObservable.unsubscribe()</code>. This is important to prevent <a href="https://en.wikipedia.org/wiki/Memory_leak" target="_blank" rel="noreferrer noopener">memory leak</a>. Note that when using an Observable created by Angular it is not necessary to unsubscribe because Angular handles unsubscription automatically. E.g. <em>params observable</em> in the context of routing.
+  </li>
+</ol>

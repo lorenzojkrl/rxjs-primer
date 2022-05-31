@@ -3,7 +3,7 @@
 1. [What is RxJS](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#1-what-is-rxjs)
 2. [Why RxJS? RxJS vs Promises](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#2-why-rxjs-rxjs-vs-promises)
 3. [What are Observables](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#3-what-are-observables)
-4. What are Observers
+4. [What are Observers](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#4-what-are-observers)
 5. Hands-on-1: Create an RxJS Observable
 6. Hands-on-2: RxJS Interval 
 
@@ -107,3 +107,19 @@ Observables are data over time. They are a data source.
   <li><strong>Unsubscribe</strong>. Finally, when you don't need any more data you unsubscribe using the unsubscribe() method: <code>myObservable.unsubscribe()</code>. This is important to prevent <a href="https://en.wikipedia.org/wiki/Memory_leak" target="_blank" rel="noreferrer noopener">memory leak</a>. Note that when using an Observable created by Angular it is not necessary to unsubscribe because Angular handles unsubscription automatically. E.g. <em>params observable</em> in the context of routing.
   </li>
 </ol>
+
+## 4. What are Observers?
+Observers are the consumers of data from an Observable.
+
+“An Observer is a consumer of values delivered by an Observable. Observers are simply a set of callbacks, one for each type of notification delivered by the Observable: next, error, and complete.“, [rxjs.dev](https://rxjs.dev/guide/observer).
+
+“Observers are just objects with three callbacks, one for each type of notification that an Observable may deliver“.
+
+### What are notifications?
+An Observable will always deliver one of the following three types of values, called notifications:
+
+- next()
+- error()
+- complete()
+
+If the Observable delivers error or complete, no more values will be delivered. When the Observable delivers complete we know that there is no more data coming.

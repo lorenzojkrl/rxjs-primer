@@ -6,6 +6,12 @@
 4. [What are Observers](https://github.com/lorenzojkrl/rxjs-primer/edit/main/README.md#4-what-are-observers)
 5. Hands-on-1: Create an RxJS Observable
 6. Hands-on-2: RxJS Interval 
+7. Hands-on-3: Of, From
+8. Operators
+9. Hands-on-4: map operator
+10. Hands-on-5: tap operator
+11. Hands-on-6: take operator
+12. Angular Async Pipe
 
 ## 1. What is RxJS
 
@@ -113,8 +119,6 @@ Observers are the consumers of data from an Observable.
 
 “An Observer is a consumer of values delivered by an Observable. Observers are simply a set of callbacks, one for each type of notification delivered by the Observable: next, error, and complete.“, [rxjs.dev](https://rxjs.dev/guide/observer).
 
-“Observers are just objects with three callbacks, one for each type of notification that an Observable may deliver“.
-
 ### What are notifications?
 An Observable will always deliver one of the following three types of values, called notifications:
 
@@ -123,3 +127,14 @@ An Observable will always deliver one of the following three types of values, ca
 - complete()
 
 If the Observable delivers error or complete, no more values will be delivered. When the Observable delivers complete we know that there is no more data coming.
+
+“Observers are just objects with three callbacks, one for each type of notification that an Observable may deliver“.
+
+```
+const observer = {
+  next: x => console.log('Observer got data: ' + x),
+  error: err => console.error('Observer got an error: ' + err),
+  complete: () => console.log('Observer got a complete notification'),
+};
+```
+

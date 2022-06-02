@@ -138,3 +138,10 @@ const observer = {
 };
 ```
 
+## 5. Hands-on-1: Create an RxJS Observable
+Here, we want to create a simple Observable that counts from zero on. 
+
+Be aware that there are better ways to create an Observable. It is recommended to use built-in creation functions. 
+As reported in the [documentation](https://rxjs.dev/guide/observable#creating-observables), “M_ost commonly, observables are created using creation functions, like of, from, interval, etc_“. 
+
+However, for the sake of simplicity, we will use new Observable and we will have a look at creation functions later.
